@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://devconnect:devconnect@devconnect-7fpf0.mongodb.net/test?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://devconnect:devconnect@devconnect-7fpf0.mongodb.net/test?retryWrites=true&w=majority",
+  "mongoLocalURI": "mongodb://andrey:alpha777@localhost:27017"
 }
