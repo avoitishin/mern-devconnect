@@ -27,7 +27,7 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    // Pull values from req body into local variables (destructure)
+    // Pull values from req body into local variables (de-structure)
     const { name, email, password } = req.body;
 
     try {
@@ -63,7 +63,7 @@ router.post(
       // Save user to DB
       await user.save();
 
-      // Return jsonwebtocken
+      // Return jsonwebtoken
 
       res.send('User registered');
     } catch (err) {
