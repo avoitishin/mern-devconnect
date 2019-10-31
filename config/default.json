@@ -2,5 +2,5 @@
   "mongoURI": "mongodb+srv://devconnect:devconnect@devconnect-7fpf0.mongodb.net/test?retryWrites=true&w=majority",
   "mongoLocalURI": "mongodb://andrey:alpha777@localhost:27017",
   "jwtSecret": "mysecrettoken",
-  "jwtExpire": "360000"
+  "jwtExpire": "36000000"
 }
