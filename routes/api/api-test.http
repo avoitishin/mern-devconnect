@@ -1,4 +1,11 @@
-GET http://localhost:5000/api/users
+POST http://localhost:5000/api/users
+Content-Type: application/json
+
+{
+    "name": "Andrey V",
+    "email": "some@gmail.com",
+    "password": "hello"
+}
 ###
 GET http://localhost:5000/api/auth
 ###
