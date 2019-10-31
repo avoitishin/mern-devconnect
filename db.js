@@ -5,8 +5,11 @@ const db = config.get('mongoURI');
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
+      // Getting rid of "deprecated ..."" warnings
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
+      useCreateIndex: true
+      //
     });
 
     console.log('MongoDB Connected...');
