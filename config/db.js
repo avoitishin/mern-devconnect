@@ -8,7 +8,8 @@ const connectDB = async () => {
       // Getting rid of "deprecated ..."" warnings
       useNewUrlParser: true,
       useUnifiedTopology: true,
-      useCreateIndex: true
+      useCreateIndex: true,
+      useFindAndModify: false
       //
     });
 
