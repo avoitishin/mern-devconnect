@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "9f52ee77-7ac5-4a47-acbf-7d114d526c72",
+		"name": "Profiles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get current user's profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRiYjQ4OGQ4Nzc2NTMzZjhiNDA0NDExIn0sImlhdCI6MTU3MjU2NDUwMywiZXhwIjoxNTcyNjAwNTAzfQ.pGW_BIIwV-75LE0CfsT2Zb5rqSLQZP3dyvfyL9rPQTY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/me",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"me"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create or update user profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRiYjQ4OGQ4Nzc2NTMzZjhiNDA0NDExIn0sImlhdCI6MTU3MjU2NzU2MCwiZXhwIjoxNTcyNjAzNTYwfQ.h2NivqK1IZ-7__huSrwfzAlpWTSKLTBbWB8_wm1FxzU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"company\": \"Web Beasts\",\n\t\"status\": \"Developer\",\n\t\"skills\": \"HTML, CSS, React, Express, MongoDB, MySQL\",\n\t\"website\": \"http://www.google.ca\",\n\t\"location\": \"Toronto, Ontario\",\n\t\"bio\": \"I am a test profile for a test 1 user\",\n\t\"githubusername\": \"avoitishin\",\n\t\"twitter\": \"https://twitter.com/test1\",\n\t\"facebook\": \"https://facebook.com/test1\",\n\t\"youtube\": \"https://youtube.com/test1\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all profiles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get profile by user ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/user/5dbb8b805d5aec52e1f1b139",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"user",
+						"5dbb8b805d5aec52e1f1b139"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile, user, and posts",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRiYjliYjJjYzlhZTE1OWUyMWU1MjQ2In0sImlhdCI6MTU3MjU3NjE3OCwiZXhwIjoxNTcyNjEyMTc4fQ.Oy4h-DGGYQZ5maPAiKwxkd2IYQldf0PpsusWLanbf6s",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create profile experience",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRiYjQ4OGQ4Nzc2NTMzZjhiNDA0NDExIn0sImlhdCI6MTU3MjY2MDMyMywiZXhwIjoxNTcyNjk2MzIzfQ.RqhftDZMUS3FkEzXSfRObqQeVpYDgOfx_9F1-ASoe-k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"CEO\",\n\t\"company\": \"Awesome Soft\",\n\t\"location\": \"Elseweyr\",\n\t\"from\": \"8-10-2016\",\n\t\"current\": true,\n\t\"description\": \"Run the company\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile experience",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRiYjQ4OGQ4Nzc2NTMzZjhiNDA0NDExIn0sImlhdCI6MTU3MjY2MDMyMywiZXhwIjoxNTcyNjk2MzIzfQ.RqhftDZMUS3FkEzXSfRObqQeVpYDgOfx_9F1-ASoe-k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/experience/5dbce80206f4e9117af796f8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"experience",
+						"5dbce80206f4e9117af796f8"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create profile education",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRiYjQ4OGQ4Nzc2NTMzZjhiNDA0NDExIn0sImlhdCI6MTU3MjY2MDMyMywiZXhwIjoxNTcyNjk2MzIzfQ.RqhftDZMUS3FkEzXSfRObqQeVpYDgOfx_9F1-ASoe-k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"school\": \"York University\",\n\t\"degree\": \"Bachelor\",\n\t\"fieldofstudy\": \"Computer Science\",\n\t\"from\": \"9-3-1996\",\n\t\"to\": \"5-25-2000\",\n\t\"description\": \"Iniversity degree\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete profile education",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNWRiYjQ4OGQ4Nzc2NTMzZjhiNDA0NDExIn0sImlhdCI6MTU3MjY2MDMyMywiZXhwIjoxNTcyNjk2MzIzfQ.RqhftDZMUS3FkEzXSfRObqQeVpYDgOfx_9F1-ASoe-k"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/api/profile/education/5dbcf08bd3c17715a6e07f1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"profile",
+						"education",
+						"5dbcf08bd3c17715a6e07f1e"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
